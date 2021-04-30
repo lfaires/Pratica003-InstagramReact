@@ -1,26 +1,19 @@
 export default function Posts() {
     return (
-        <div class="posts">
-          <Post />
-        </div>
+    <div class="posts">
+        <Post nome="meowed" conteudo="gato-telefone" outros="respondeai" />
+        <Post nome="barked" conteudo="dog" outros="adorable_animals" />
+    </div>
     )
 }
 
-function Post() {
+function Post(props) {
     return (
-        <div class="post">
-            {user.map(nome => (
-                <Topo nome={nome} imgSrc={"assets/img/"+ nome +".svg"} />
-                ))}
-
-            {conteudo.map(nome => (
-                <Conteudo imgSrc={"assets/img/"+ nome +".svg"}/>
-                ))}
-
-            {otherUser.map(nome => (
-                <Fundo nome={nome} imgSrc={"assets/img/"+ nome +".svg"} />
-                ))}
-        </div>
+    <div class="post">
+        <Topo nome={props.nome} />
+        <Conteudo conteudo={props.conteudo}/>
+        <Fundo outros={props.outros} />
+    </div>
     )
 }
 
@@ -28,8 +21,8 @@ function Topo(props) {
     return (
         <div class="topo">
             <div class="usuario">
-                <img src={props.imgSrc}/>
-                {props.name}
+                <img src={"assets/img/" + props.nome + ".svg"}/>
+                {props.nome}
             </div>
             <div class="acoes">
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -41,7 +34,7 @@ function Topo(props) {
 function Conteudo(props) {
     return (
         <div class="conteudo">
-            <img src={props.imgSrc} />
+            <img src={props.conteudo} />
         </div>
     )
 }
@@ -60,9 +53,9 @@ function Fundo(props) {
                 </div>
             </div>
             <div class="curtidas">
-                <img src={props.imgSrc} />
+                <img src={"assets/img/" + props.outros + ".svg"} />
                 <div class="texto">
-                    Curtido por <strong>{props.nome}</strong> e <strong>outras 99.159 pessoas</strong>
+                    Curtido por <strong>{props.outros}</strong> e <strong>outras 99.159 pessoas</strong>
                 </div>
             </div>
         </div>
