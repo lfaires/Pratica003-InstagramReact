@@ -1,13 +1,11 @@
-const user = ["meowed", "barked"]
-const conteudo = ["gato-telefone", "dog"]
-const otherUser = ["respondeai", "adorable_animals"]
-const qtd = ["101.523","99.159"]
+const users = [
+    {nome: "meowed", conteudo: "gato-telefone", outroNome: "respondeai", qtd: "101.523"},
+    {nome: "barked", conteudo: "dog", outroNome: "adorable_animals", qtd: "99.159"}]
 
 export default function Posts() {
     return (
     <div class="posts">
-        <Post nome="meowed" conteudo="gato-telefone" outros="respondeai" qtd="101.523"/>
-        <Post nome="barked" conteudo="dog" outros="adorable_animals" qtd="99.159"/>
+        {users.map( user => <Post nome={user.nome} conteudo={user.conteudo} outros={user.outroNome} qtd={user.qtd} />)}
     </div>
     )
 }
