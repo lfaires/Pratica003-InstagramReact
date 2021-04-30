@@ -6,8 +6,8 @@ const qtd = ["101.523","99.159"]
 export default function Posts() {
     return (
     <div class="posts">
-        <Post nome="meowed" conteudo="gato-telefone" outros="respondeai" />
-        <Post nome="barked" conteudo="dog" outros="adorable_animals" />
+        <Post nome="meowed" conteudo="gato-telefone" outros="respondeai" qtd="101.523"/>
+        <Post nome="barked" conteudo="dog" outros="adorable_animals" qtd="99.159"/>
     </div>
     )
 }
@@ -17,7 +17,7 @@ function Post(props) {
     <div class="post">
         <Topo nome={props.nome} />
         <Conteudo conteudo={props.conteudo}/>
-        <Fundo outros={props.outros} />
+        <Fundo outros={props.outros} qtd={props.qtd}/>
     </div>
     )
 }
@@ -46,7 +46,7 @@ function Conteudo(props) {
 
 function Fundo(props) {
     return (
-        <div class="Fundo">
+        <div class="fundo">
             <div class="acoes">
                 <div>
                 <ion-icon name="heart-outline"></ion-icon>
@@ -57,10 +57,11 @@ function Fundo(props) {
                 <ion-icon name="bookmark-outline"></ion-icon>
                 </div>
             </div>
+
             <div class="curtidas">
-                <img src={"assets/img/" + props.outros + ".svg"} />
+                <img src={"assets/img/"+ props.outros +".svg"} />
                 <div class="texto">
-                    Curtido por <strong>{props.outros}</strong> e <strong>outras 99.159 pessoas</strong>
+                    Curtido por <strong>{props.outros}</strong> e <strong>outras {props.qtd} pessoas</strong>
                 </div>
             </div>
         </div>
