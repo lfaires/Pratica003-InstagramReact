@@ -25,7 +25,7 @@ function Esquerda() {
 function SideBar() {
     return (
         <div class="sidebar">
-            <User />
+            <User nome="catanacomics" user="Catana" />
             <Sugestoes />
             <Rodape />
         </div>

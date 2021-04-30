@@ -1,3 +1,5 @@
+const userName = ["9gag", "meowed", "barked", "nathanwpylestrangeplanet", "wawawicomics", "respondeai", "filomoderna", "memeriagourmet"]
+
 export default function Stories() {
     return (
         <div class="stories">
@@ -23,5 +25,3 @@ function Story (props) {
      
     )
 }
-
-const userName = ["9gag", "meowed", "barked", "nathanwpylestrangeplanet", "wawawicomics", "respondeai", "filomoderna", "memeriagourmet"]

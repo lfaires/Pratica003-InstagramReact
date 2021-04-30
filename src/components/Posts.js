@@ -1,3 +1,8 @@
+const user = ["meowed", "barked"]
+const conteudo = ["gato-telefone", "dog"]
+const otherUser = ["respondeai", "adorable_animals"]
+const qtd = ["101.523","99.159"]
+
 export default function Posts() {
     return (
     <div class="posts">
@@ -34,7 +39,7 @@ function Topo(props) {
 function Conteudo(props) {
     return (
         <div class="conteudo">
-            <img src={props.conteudo} />
+            <img src={"assets/img/" + props.conteudo + ".svg"} />
         </div>
     )
 }
@@ -61,7 +66,3 @@ function Fundo(props) {
         </div>
     )
 }
-
-const user = ["meowed", "barked"]
-const conteudo = ["gato-telefone", "dog"]
-const otherUser = ["respondeai", "adorable_animals"]
