@@ -1,6 +1,7 @@
 const users = [
     {nome: "meowed", conteudo: "gato-telefone", outroNome: "respondeai", qtd: "101.523"},
-    {nome: "barked", conteudo: "dog", outroNome: "adorable_animals", qtd: "99.159"}]
+    {nome: "barked", conteudo: "dog", outroNome: "adorable_animals", qtd: "99.159"},
+    {nome: "mimi", conteudo: "mimiaires", outroNome: "dilma13", qtd: "665.074"}]
 
 export default function Posts() {
     return (
