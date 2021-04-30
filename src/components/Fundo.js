@@ -1,11 +1,7 @@
 export default function Fundo() {
     return (
         <div class="fundo-mobile">
-            <Icone name="home" />
-            <Icone name="search-outline" />
-            <Icone name="add-circle-outline" />
-            <Icone name="heart-outline" />
-            <Icone name="person-outline" />
+           {icones.map(nome => <Icone name={nome} />)}
         </div>
     )
 }
@@ -15,3 +11,5 @@ function Icone(props){
         <ion-icon name={props.name}></ion-icon>
     )
 }
+
+const icones =["home", "search-outline", "add-circle-outline", "heart-outline", "person-outline"]
